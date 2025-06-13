@@ -1,0 +1,71 @@
+ body {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: #20151D; 
+        background-image: url('fundo.gif');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #2B1A20;
+    }
+    .bg-rose-gold { 
+      background-color: rgba(32, 21, 29, 0.7);
+    }
+  
+
+    
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+
+
+
+    .text-rose-gold {
+      color: #eba4ae;
+    }
+    .border-rose-gold {
+      border-color: #b76e79;
+    }
+    .bg-gold {
+      background-color: #d4af37;
+    }
+    .text-gold {
+      color: #ffd344;
+    }
+    .floating-btn {
+      box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(183, 110, 121, 0.2);
+    }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      overflow: auto;
+    }
+    .modal-content {
+      background-color: #2B1A20;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+    }
+    

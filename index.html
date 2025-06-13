@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Karina, com amor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+  
+<body class="min-h-screen">
+  <div class="bg-rose-gold min-h-screen">
+    <audio id="bg-music" loop>
+      <source src="bomdia.mp3" type="audio/mp3" />
+    </audio>
+    
+    <button id="music-toggle" class="fixed bottom-6 right-6 z-50 bg-white rounded-full p-3 shadow-lg floating-btn transition-all hover:bg-pink-50">
+      ▶️
+    </button>
+
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+      <!-- Hero Section -->
+      <section class="hero text-center mb-12 pt-8">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gold">Para Karina, com amor 🌹</h1>
+        <p class="text-xl text-rose-gold">Eterna namorada</p>
+      </section>
+      
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <!-- Carta Romântica Card -->
+        <a href="carta/carta.html" class="card-hover transition-all card-bg rounded-lg p-6 shadow-md border border-rose-gold hover:border-gold">
+          <div class="flex items-center mb-4">
+            <div class="bg-rose-900 p-3 rounded-full mr-4">
+              <span class="text-2xl">💌</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-rose-gold">Cartinha pro cê</h2>
+          </div>
+          <p class="text-gray-300">Clique para ver uma cartinha virtual</p>
+        </a>
+        
+        <!-- Flores Card -->
+        <div class="card-hover transition-all card-bg rounded-lg p-6 shadow-md border border-rose-gold hover:border-gold">
+          <div class="flex items-center mb-4">
+            <div class="bg-rose-900 p-3 rounded-full mr-4">
+              <span class="text-2xl">🌷</span>
+            </div>
+            <h2 class="text-2xl font-semibold text-rose-gold">Significado da Tulipa Rosa</h2>
+          </div>
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <img src="tulipa.gif" alt="Tulipa" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="flex-1">
+              <h3 class="font-semibold text-lg mb-2 text-gold">Recomeço & Amor Perfeito</h3>
+              <p class="text-gray-300">
+                Sabia que as tulipas rosas significam isso?
+                Eu também não… mas quando soube, tudo fez mais sentido.
+                É delicada, mas cresce mesmo depois do frio.
+                e elas são as primeiras a nascer quando a primavera chega(emoji boca aberta) 
+                Não é vulgar, não se exibe, é perfeita e marca presença só de existir
+                <br><strong>Tu és minha tulipa rosa</strong> 🌷💗</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- Vales Presentes Card -->
+        <div onclick="openValesModal()" class="card-hover transition-all card-bg rounded-lg p-6 shadow-md border border-rose-gold hover:border-gold cursor-pointer col-span-1 md:col-span-2">
+          <div class="vale-container">
+            <img src="capavales.png" alt="Vales Presentes" class="mx-auto h-64 md:h-96 object-contain mb-4">
+        </div>
+        </div>
+        
+
+        <a href="meama.html" class="card-hover transition-all card-bg rounded-lg p-6 shadow-md border border-rose-gold hover:border-gold cursor-pointer col-span-1 md:col-span-2">
+          <div class="flex items-center mb-4 justify-center">
+            <div class="bg-rose-900 p-3 rounded-full mr-4">
+              <span class="text-2xl">❓</span>
+            </div>
+l            <h2 class="text-2xl font-semibold text-gold">eiii, uma pergunta Importante</h2>
+          </div>
+          <p class="text-center text-gray-300">Clique aqui para responder</p>
+        </a>
+      </div>
+      
+      
+      
+      <div id="valesModal" class="modal">
+      <div class="modal-content">
+        <span class="close float-right text-3xl cursor-pointer text-gold" onclick="closeModal('valesModal')">&times;</span>
+        <h2 class="text-3xl font-bold mb-8 text-center text-gold">Seus Vales Especiais</h2>
+        <div class="grid grid-cols-1 gap-8">
+          <div class="text-center">
+            <h3 class="text-2xl font-semibold mb-4 text-gold">Vale beijos</h3>
+            <img src="valebeijo.png" alt="Vale Beijos" class="vale-img">
+            <button onclick="downloadVale('valebeijo.png')" class="mt-4 bg-gold text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-all">
+              Baixar Vale
+            </button>
+          </div>
+          <div class="text-center">
+            <h3 class="text-2xl font-semibold mb-4 text-gold">Vale Pedidos</h3>
+            <img src="valesim.png" alt="Vale Pedido" class="vale-img">
+            <button onclick="downloadVale('valesim.png')" class="mt-4 bg-gold text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-all">
+              Baixar Vale
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 🎮 Mini Jogo do Amor - Versão com Respostas Especiais -->
+<section class="bg-[#2a1b25] rounded-lg p-8 shadow-lg border-2 border-gold mb-12">
+  <h2 class="text-3xl font-bold mb-6 text-center text-gold">🎮 Teste do Amor</h2>
+  
+  <div id="game-container" class="text-center">
+    <!-- Tela inicial -->
+    <div id="start-screen">
+      <p class="text-xl mb-6 text-rose-200">Será que você acerta? 😏</p>
+      <button onclick="startGame()" class="bg-gold text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-all">
+        Vamos ver!
+      </button>
+    </div>
+    
+    <!-- Perguntas -->
+    <div id="questions-screen" class="hidden">
+      <div class="mb-6">
+        <p id="question-text" class="text-xl font-medium text-gold mb-4"></p>
+        <input 
+          type="text" 
+          id="answer-input" 
+          class="w-full p-3 rounded-lg border border-gold bg-[#20151D] text-rose-200 placeholder-rose-400 focus:outline-none focus:ring-2 focus:ring-gold"
+          placeholder="Digite sua resposta..."
+        >
+      </div>
+      <button onclick="nextQuestion()" class="bg-gold text-white px-6 py-2 rounded-full hover:bg-amber-600 transition-all">
+        Confirmar
+      </button>
+    </div>
+    
+    <!-- Resultado -->
+    <div id="result-screen" class="hidden">
+      <p id="result-text" class="text-xl mb-6 text-rose-200"></p>
+      <button onclick="resetGame()" class="bg-gold text-white px-6 py-2 rounded-full hover:bg-amber-600 transition-all">
+        Jogar de novo
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Variáveis do jogo com respostas pré-definidas
+  let currentQuestion = 0;
+  const questions = [
+    "🎵 Qual gênero musical eu comecei a ouvir por sua causa?",
+    "Se eu fosse um bicho, qual seria?",
+    "Complete: Você é meu..."
+  ];
+  const correctAnswers = ["MPB", "macaco", "bombom de chocolate branco"];
+  const userAnswers = [];
+  let score = 0;
+  
+  // Inicia o jogo
+  function startGame() {
+    currentQuestion = 0;
+    score = 0;
+    userAnswers.length = 0;
+    document.getElementById('start-screen').classList.add('hidden');
+    document.getElementById('questions-screen').classList.remove('hidden');
+    document.getElementById('result-screen').classList.add('hidden');
+    showQuestion();
+  }
+  
+  // Mostra a pergunta atual
+  function showQuestion() {
+    document.getElementById('question-text').textContent = questions[currentQuestion];
+    document.getElementById('answer-input').value = '';
+    document.getElementById('answer-input').focus();
+  }
+  
+  // Verifica resposta e avança
+  function nextQuestion() {
+    const userAnswer = document.getElementById('answer-input').value.trim().toLowerCase();
+    
+    if (!userAnswer) {
+      alert("Ei, responde direito! 😘");
+      return;
+    }
+    
+    userAnswers.push(userAnswer);
+    
+    // Verifica se acertou
+    if (userAnswer === correctAnswers[currentQuestion].toLowerCase()) {
+      score++;
+    }
+    
+    currentQuestion++;
+    
+    if (currentQuestion < questions.length) {
+      showQuestion();
+    } else {
+      endGame();
+    }
+  }
+  
+  // Finaliza o jogo
+  function endGame() {
+    document.getElementById('questions-screen').classList.add('hidden');
+    const resultScreen = document.getElementById('result-screen');
+    resultScreen.classList.remove('hidden');
+    
+    // Monta mensagem personalizada
+    let resultHTML = `
+      <div class="mb-6">
+        <p class="text-2xl mb-4"> acertou <span class="text-gold font-bold">${score} de ${questions.length}</span>!</p>
+    `;
+    
+    // Feedback para cada resposta
+    questions.forEach((q, i) => {
+      const isCorrect = userAnswers[i] === correctAnswers[i].toLowerCase();
+      resultHTML += `
+        <div class="text-left mb-4 p-3 rounded-lg ${isCorrect ? 'bg-green-900/30' : 'bg-rose-900/30'}">
+          <p class="font-medium">${q}</p>
+          <p class="${isCorrect ? 'text-green-300' : 'text-rose-300'}">
+            Sua resposta: <strong>${userAnswers[i]}</strong>
+            ${!isCorrect ? `<br>Minha resposta: <strong class="text-gold">${correctAnswers[i]}</strong>` : ''}
+          </p>
+          ${isCorrect ? '✅ Acertou!' : '❌ Quase!'}
+        </div>
+      `;
+    });
+    
+    // Mensagem final personalizada
+    resultHTML += `
+    <p class="text-2xl mt-6 text-gold animate-pulse">
+      ${score === questions.length ? '🎉 isso gostosa, agr manda ft do rosto!! o minimo que mereço, ner' : 
+      score > 0 ? ' nera pra ter errado não!' : 
+      '🤔 tu se fez né'}
+      </p>
+      `;
+      
+      document.getElementById('result-text').innerHTML = resultHTML;
+    }
+    
+    // Reinicia o jogo
+    function resetGame() {
+      startGame();
+    }
+    </script>
+
+
+      <section class="text-center card-bg rounded-lg p-8 shadow-lg border-2 border-gold mb-12">
+        <h2 class="text-3xl font-bold mb-6 text-gold"> fiz um video pra ti</h2>
+        <div class="mb-6">
+          <video controls autoplay muted class="mx-auto rounded-lg shadow-lg w-full max-w-2xl">
+            <source src="fofo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="text-xl mb-6 text-black">Sim, eu gostei muito dessa letra e dessa foto....</p>
+      </section>
+
+
+
+  <script src="script.js"></script>
+</body>
+        <footer class="text-center py-6 text-[#20151D]>
+          <p class="text-sm mt-2"  >Feito com ❤️ especialmente para Karina</p>
+          <p class="text-sm mt-2 ">Dia das Namoradas 2025</p>
+        </footer>
+      </main>
+</html>
